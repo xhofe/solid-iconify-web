@@ -20,7 +20,7 @@ const Collections = () => {
     setShowNum(icons().length);
   };
   return (
-    <div w-full py-2>
+    <div w-full py-2 flex-1 class="overflow-overlay">
       <div
         non-dragging
         flex-row

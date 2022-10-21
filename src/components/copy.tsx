@@ -16,12 +16,14 @@ export const Copy = (props: CopyProps) => {
       flex="row"
       justify-between
       items-center
+      hover="border-indigo"
+      font-mono
     >
       {props.children}
       <Show
         when={copied()}
         fallback={
-          <div cursor-pointer c-indigo>
+          <div cursor-pointer c-indigo hover="c-indigo-5" active="c-indigo-6">
             <MdiContentCopy
               size={20}
               onClick={() => {
@@ -33,7 +35,7 @@ export const Copy = (props: CopyProps) => {
           </div>
         }
       >
-        <span c-indigo>copied!</span>
+        <span c-indigo>Copied!</span>
       </Show>
     </div>
   );

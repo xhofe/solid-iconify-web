@@ -8,9 +8,7 @@ export const Install = () => {
           <span c-indigo break-all>
             pnpm install
           </span>
-          <span ml-1 break-all>
-            solid-iconify
-          </span>
+          <span break-all>&nbsp;solid-iconify</span>
         </div>
       </Copy>
     </div>

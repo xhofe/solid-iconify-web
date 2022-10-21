@@ -89,7 +89,7 @@ export const IconShow = (props: IconProps) => {
               >
                 <MdiClose size={30} />
               </div>
-              <div rounded-xl border="1 indigo/50" p-2>
+              <div rounded-xl border="1 indigo/50" p-2 hover="border-indigo">
                 <Icon {...props} size={200} />
               </div>
               <div gap-3 flex-1>
@@ -101,9 +101,12 @@ export const IconShow = (props: IconProps) => {
                     <span c-indigo break-all>
                       import
                     </span>
-                    <span mx-1 break-all>
-                      {" "}
-                      {`{ ${name} }`}
+                    <span break-all c-orange>
+                      {" { "}
+                    </span>
+                    <span break-all>{name}</span>
+                    <span break-all c-orange>
+                      {" } "}
                     </span>
                     <span c-indigo break-all>
                       from 'solid-iconify/{props.dir}'
