@@ -10,7 +10,7 @@ export const Copy = (props: CopyProps) => {
   const [copied, setCopied] = createSignal(false);
   return (
     <div
-      border="1 indigo"
+      border="1 indigo/50"
       p-4
       rounded-lg
       flex="row"

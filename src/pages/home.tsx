@@ -1,12 +1,13 @@
 import { createSignal, For } from "solid-js";
 import { Collection } from "../components/collection";
+import { Install } from "../components/install";
 import { searchCollections } from "../store/collections";
 
 const Collections = () => {
   const [keyword, setKeyword] = createSignal("");
   return (
     <div p="4" gap="2" items-center w-full>
-      <div flex="row" w-full justify-center>
+      <div mb-2 flex="row" w-full justify-center>
         <input
           placeholder="Search collections"
           border="2 indigo/30"
@@ -22,6 +23,7 @@ const Collections = () => {
           value={keyword()}
         />
       </div>
+      <Install />
       <For each={searchCollections(keyword())}>
         {([category, collections]) => (
           <div w-full>

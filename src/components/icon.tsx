@@ -89,7 +89,7 @@ export const IconShow = (props: IconProps) => {
               >
                 <MdiClose size={30} />
               </div>
-              <div rounded-xl border="1 indigo" p-2>
+              <div rounded-xl border="1 indigo/50" p-2>
                 <Icon {...props} size={200} />
               </div>
               <div gap-3 flex-1>
