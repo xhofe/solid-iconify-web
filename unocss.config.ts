@@ -7,14 +7,11 @@ import {
   presetWebFonts,
   // transformerDirectives,
   // transformerVariantGroup,
-} from "unocss"
+} from "unocss";
 
 export default defineConfig({
   shortcuts: [
-    [
-      "btn",
-      "text-sm px-4 py-1 rounded inline-block bg-green-600 text-white cursor-pointer hover:bg-green-700 active:bg-green-800 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50",
-    ],
+    ["btn", "flex items-center justify-center py-2 px-4 rounded-md font-600 c-white"],
   ],
   presets: [
     presetUno(),
@@ -39,4 +36,4 @@ export default defineConfig({
     // transformerDirectives(),
     // transformerVariantGroup(),
   ],
-})
+});

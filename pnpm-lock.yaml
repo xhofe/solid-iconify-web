@@ -5,26 +5,26 @@ specifiers:
   '@solidjs/router': ^0.5.0
   '@unocss/reset': ^0.45.30
   iconify-icon: ^1.0.1
-  solid-iconify: ^0.0.3
-  solid-js: ^1.4.8
+  solid-iconify: ^0.0.4
+  solid-js: ^1.6.0
   typescript: ^4.7.4
   unocss: ^0.45.30
   vite: ^3.0.9
-  vite-plugin-solid: ^2.3.0
+  vite-plugin-solid: ^2.3.10
 
 dependencies:
   '@iconify/types': 2.0.0
   '@solidjs/router': 0.5.0_solid-js@1.6.0
   '@unocss/reset': 0.45.30
   iconify-icon: 1.0.1
-  solid-iconify: 0.0.3_solid-js@1.6.0
+  solid-iconify: 0.0.4_solid-js@1.6.0
   solid-js: 1.6.0
 
 devDependencies:
   typescript: 4.7.4
   unocss: 0.45.30_vite@3.1.8
   vite: 3.1.8
-  vite-plugin-solid: 2.3.0_solid-js@1.6.0+vite@3.1.8
+  vite-plugin-solid: 2.3.10_solid-js@1.6.0+vite@3.1.8
 
 packages:
 
@@ -1437,10 +1437,10 @@ packages:
       totalist: 3.0.0
     dev: true
 
-  /solid-iconify/0.0.3_solid-js@1.6.0:
-    resolution: {integrity: sha512-JzqB8Eiih9XE03ei03HdhNQeBRcvhxg63kqyKQXAe5lZ3W5CvDo2lMjzWOjPn/zquVXnnLx12UJkMpmdgg8AAA==}
+  /solid-iconify/0.0.4_solid-js@1.6.0:
+    resolution: {integrity: sha512-3bQt93g2Gfp5qefE5tBtUV1ap7o3p87EEaBRiqXbuFAUEc+JWiYMK92H7kr4JOemRm4Mop/78JAHIfH2PSyLpQ==}
     peerDependencies:
-      solid-js: ^1.4.8
+      solid-js: ^1.6.0
     dependencies:
       solid-js: 1.6.0
     dev: false
@@ -1581,8 +1581,8 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /vite-plugin-solid/2.3.0_solid-js@1.6.0+vite@3.1.8:
-    resolution: {integrity: sha512-N2sa54C3UZC2nN5vpj5o6YP+XdIAZW6n6xv8OasxNAcAJPFeZT7EOVvumL0V4c8hBz1yuYniMWdESY8807fVSg==}
+  /vite-plugin-solid/2.3.10_solid-js@1.6.0+vite@3.1.8:
+    resolution: {integrity: sha512-5jMF+QFk2TQaPLlDl7LvZZ99D4kO1X+rD9LR78p9sx9O+XisVSQaHFPLrCsyW/lXuBwub+ox/pNaZdCUZJwd3Q==}
     peerDependencies:
       solid-js: ^1.3.17
       vite: ^3.0.0

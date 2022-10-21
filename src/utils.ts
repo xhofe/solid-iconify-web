@@ -11,8 +11,8 @@ export const convertCollectionName = (name: string) => {
   return firstUpperCase(ans)
 }
 
-export const getIconName = (cName: string, iName: string) => {
-  return `${cName}-${iName}`.replace(/-(\w)/g, (all, letter) => {
+export const getIconName = (dir: string, iName: string) => {
+  return `${dir}-${iName}`.replace(/-(\w)/g, (all, letter) => {
     return letter.toUpperCase()
   })
 }
