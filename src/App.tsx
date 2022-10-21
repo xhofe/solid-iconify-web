@@ -24,7 +24,7 @@ const App: Component = () => {
   return (
     <div h-screen w-full>
       <Header />
-      <div w-full class="overflow-overlay">
+      <div w-full flex-1 class="overflow-overlay">
         <Routes />
       </div>
     </div>

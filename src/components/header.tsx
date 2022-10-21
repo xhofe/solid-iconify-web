@@ -33,16 +33,17 @@ export const Header = () => {
         Solid iconify
       </h1>
       <div flex="row" gap="2">
-        <Link href="/collection/all">
+        {/* <Link href="/collection/all">
           <CharmSearch size={24} />
-        </Link>
+        </Link> */}
         <Dynamic
           component={dark() ? CarbonMoon : CarbonSun}
           size={24}
+          cursor="pointer"
           onClick={() => setDark(!dark())}
         />
         <a href="https://github.com/Xhofe/solid-iconify">
-          <MdiGithub size={24} />
+          <MdiGithub cursor="pointer" size={24} />
         </a>
       </div>
     </div>

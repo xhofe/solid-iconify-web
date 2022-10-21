@@ -4,6 +4,7 @@ specifiers:
   '@iconify/types': ^2.0.0
   '@solidjs/router': ^0.5.0
   '@unocss/reset': ^0.45.30
+  copy-to-clipboard: ^3.3.2
   iconify-icon: ^1.0.1
   solid-iconify: ^0.0.4
   solid-js: ^1.6.0
@@ -16,6 +17,7 @@ dependencies:
   '@iconify/types': 2.0.0
   '@solidjs/router': 0.5.0_solid-js@1.6.0
   '@unocss/reset': 0.45.30
+  copy-to-clipboard: 3.3.2
   iconify-icon: 1.0.1
   solid-iconify: 0.0.4_solid-js@1.6.0
   solid-js: 1.6.0
@@ -749,6 +751,12 @@ packages:
     dependencies:
       safe-buffer: 5.1.2
     dev: true
+
+  /copy-to-clipboard/3.3.2:
+    resolution: {integrity: sha512-Vme1Z6RUDzrb6xAI7EZlVZ5uvOk2F//GaxKUxajDqm9LhOVM1inxNAD2vy+UZDYsd0uyA9s7b3/FVZPSxqrCfg==}
+    dependencies:
+      toggle-selection: 1.0.6
+    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -1503,6 +1511,10 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /toggle-selection/1.0.6:
+    resolution: {integrity: sha512-BiZS+C1OS8g/q2RRbJmy59xpyghNBqrr6k5L/uKBGRsTfxmu3ffiRnd8mlGPUVayg8pvfi5urfnu8TU7DVOkLQ==}
+    dev: false
 
   /totalist/3.0.0:
     resolution: {integrity: sha512-eM+pCBxXO/njtF7vdFsHuqb+ElbxqtI4r5EAvk6grfAFyJ6IvWlSkfZ5T9ozC6xWw3Fj1fGoSmrl0gUs46JVIw==}

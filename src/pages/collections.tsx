@@ -10,10 +10,11 @@ const Collections = () => {
     <div flex-row w-full h-full>
       <div py-4 px-2 w-54 h-full border="r gray/30">
         <input
-          placeholder="Search icons"
+          placeholder="Search collections"
           border="2 indigo/30"
           outline-none
           focus="border-indigo border-2"
+          c-indigo-5
           px-4
           py-2
           rounded-md
@@ -37,8 +38,8 @@ const Collections = () => {
                   cursor-pointer
                   class={
                     params.id === collection.dir
-                      ? "bg-indigo c-white"
-                      : "hover-bg-gray/15"
+                      ? "bg-indigo-5 c-white"
+                      : "hover-bg-gray/20"
                   }
                 >
                   <h2 op-90>{collection.name}</h2>
@@ -51,12 +52,13 @@ const Collections = () => {
           </For>
         </div>
       </div>
-      <div p-4 flex-1>
+      <div p-4 flex-1 class="overflow-overlay">
         <input
           placeholder="Search icons"
           border="2 indigo/30"
           outline-none
           focus="border-indigo border-2"
+          c-indigo
           px-4
           py-2
           rounded-md

@@ -20,7 +20,7 @@ const Collections = () => {
     setShowNum(icons().length);
   };
   return (
-    <div w-full p-2>
+    <div w-full py-2>
       <div
         non-dragging
         flex-row
@@ -39,10 +39,22 @@ const Collections = () => {
       </div>
       <Show when={showNum() < icons().length}>
         <div mt-2 flex-row justify-center gap-2>
-          <button class="btn" bg-indigo onClick={loadMore}>
+          <button
+            class="btn"
+            bg="indigo-5"
+            hover="bg-indigo-6"
+            active="bg-indigo-7"
+            onClick={loadMore}
+          >
             Load more
           </button>
-          <button class="btn" bg="gray/60" onClick={loadAll}>
+          <button
+            class="btn"
+            bg="gray-5"
+            hover="bg-gray-6"
+            active="bg-gray-7"
+            onClick={loadAll}
+          >
             Load all
           </button>
         </div>

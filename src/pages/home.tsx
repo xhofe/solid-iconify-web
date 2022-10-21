@@ -1,7 +1,6 @@
 import { createSignal, For } from "solid-js";
 import { Collection } from "../components/collection";
 import { searchCollections } from "../store/collections";
-import { CollectionType } from "../types";
 
 const Collections = () => {
   const [keyword, setKeyword] = createSignal("");
@@ -13,10 +12,12 @@ const Collections = () => {
           border="2 indigo/30"
           outline-none
           focus="border-indigo border-2"
+          c-indigo-5
           px-4
           py-2
           rounded-md
-          w="50%"
+          w-full
+          md="w-50%"
           onInput={(e) => setKeyword(e.currentTarget.value)}
           value={keyword()}
         />
@@ -24,7 +25,7 @@ const Collections = () => {
       <For each={searchCollections(keyword())}>
         {([category, collections]) => (
           <div w-full>
-            <h2 text-xl c-gray-5 p="2">
+            <h2 text-xl c-indigo-5 p="2">
               {category}
             </h2>
             <div
