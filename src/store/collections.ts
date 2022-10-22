@@ -22,11 +22,35 @@ export const searchCollections = (search: string = "") => {
   return Array.from(map.entries());
 };
 
+export const match = (text: string, search: string) => {
+  if (!search) return true;
+  let index = 0;
+  for (let i = 0; i < text.length; i++) {
+    if (text[i].toLowerCase() === search[index].toLowerCase()) {
+      index++;
+      if (index === search.length) return true;
+    }
+  }
+  return false;
+};
+
 export const searchIcons = (search: string = "", collectionDir = "") => {
-  const collection = collections.find(
-    (collection) => collection.dir === collectionDir
-  );
-  return collection!.icons.filter((icon) =>
-    icon.toLowerCase().includes(search.toLowerCase())
-  );
+  let icons: {
+    name: string;
+    dir: string;
+  }[] = [];
+  if (collectionDir === "all") {
+    icons = collections.flatMap((collection) =>
+      collection.icons.map((icon) => ({
+        name: icon,
+        dir: collection.dir,
+      }))
+    );
+  } else {
+    icons = collections
+      .find((collection) => collection.dir === collectionDir)
+      ?.icons.map((icon) => ({ name: icon, dir: collectionDir }))!;
+  }
+
+  return icons.filter((icon) => match(icon.name, search));
 };

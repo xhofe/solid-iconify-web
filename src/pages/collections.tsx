@@ -26,7 +26,16 @@ const Collections = () => {
         </div>
         <div mt-2 px-2 flex-1 gap-1 class="overflow-overlay">
           <For
-            each={collections.filter((c) =>
+            each={[
+              {
+                name: "All",
+                dir: "all",
+                total: collections
+                  .map((c) => c.total)
+                  .reduce((pre, cur) => pre! + cur!, 0),
+              },
+              ...collections,
+            ].filter((c) =>
               c.name.toLowerCase().includes(search().toLowerCase())
             )}
           >

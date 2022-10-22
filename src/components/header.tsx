@@ -33,9 +33,9 @@ export const Header = () => {
         Solid iconify
       </h1>
       <div flex="row" gap="2">
-        {/* <Link href="/collection/all">
+        <Link href="/collection/all">
           <CharmSearch size={24} />
-        </Link> */}
+        </Link>
         <Dynamic
           component={dark() ? CarbonMoon : CarbonSun}
           size={24}

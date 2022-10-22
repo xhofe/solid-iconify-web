@@ -34,7 +34,7 @@ const Collections = () => {
         gap-2
       >
         <For each={showIcons()}>
-          {(icon) => <IconShow dir={params.id} icon={icon} size={34} />}
+          {(icon) => <IconShow dir={icon.dir} icon={icon.name} size={34} />}
         </For>
       </div>
       <Show when={showNum() < icons().length}>
