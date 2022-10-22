@@ -24,14 +24,15 @@ export const Header = () => {
       border-b
       border="gray-5/30"
     >
-      <div flex="row" gap="2">
-        <Link href="/">
+      <Link href="/">
+        <div flex="row" gap="2" items-center>
           <TablerHomeHeart size={24} />
-        </Link>
-      </div>
-      <h1 text="xl" font="bold">
-        Solid iconify
-      </h1>
+          <h1 text="xl" font="bold">
+            Solid iconify
+          </h1>
+        </div>
+      </Link>
+
       <div flex="row" gap="2">
         <Link href="/collection/all">
           <CharmSearch size={24} />
