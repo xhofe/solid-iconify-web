@@ -10,15 +10,14 @@ const Collections = () => {
       <div mb-2 flex="row" w-full justify-center>
         <input
           placeholder="Search collections"
-          border="2 indigo/30"
           outline-none
-          focus="border-indigo border-2"
           c-indigo-5
           px-4
           py-2
           rounded-md
           w-full
           md="w-50%"
+          bg="gray/15"
           onInput={(e) => setKeyword(e.currentTarget.value)}
           value={keyword()}
         />

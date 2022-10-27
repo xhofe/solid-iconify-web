@@ -10,13 +10,14 @@ export const Copy = (props: CopyProps) => {
   const [copied, setCopied] = createSignal(false);
   return (
     <div
-      border="1 indigo/50"
+      // border="1 indigo/50"
       p-4
       rounded-lg
       flex="row"
       justify-between
       items-center
-      hover="border-indigo"
+      // hover="border-indigo"
+      bg="gray/15"
       font-mono
     >
       {props.children}

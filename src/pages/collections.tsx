@@ -12,14 +12,13 @@ const Collections = () => {
         <div px-2>
           <input
             placeholder="Search collections"
-            border="2 indigo/30"
             outline-none
-            focus="border-indigo border-2"
             c-indigo-5
             px-4
             py-2
             rounded-md
             w-full
+            bg="gray/15"
             onInput={(e) => setSearch(e.currentTarget.value)}
             value={search()}
           />
@@ -50,7 +49,7 @@ const Collections = () => {
                   class={
                     params.id === collection.dir
                       ? "bg-indigo-5 c-white"
-                      : "hover-bg-gray/20"
+                      : "hover-bg-gray/15"
                   }
                 >
                   <h2 op-90>{collection.name}</h2>
@@ -66,14 +65,13 @@ const Collections = () => {
       <div p-4 flex-1>
         <input
           placeholder="Search icons"
-          border="2 indigo/30"
           outline-none
-          focus="border-indigo border-2"
           c-indigo
           px-4
           py-2
           rounded-md
           w-full
+          bg="gray/15"
           onInput={(e) => setSearchParams({ q: e.currentTarget.value })}
           value={searchParams.q ?? ""}
         />

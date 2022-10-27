@@ -1,8 +1,8 @@
-import { Link } from "@solidjs/router"
-import { For } from "solid-js"
-import { CollectionType } from "../types"
-import { getIconName } from "../utils"
-import { Icon } from "./icon"
+import { Link } from "@solidjs/router";
+import { For } from "solid-js";
+import { CollectionType } from "../types";
+import { getIconName } from "../utils";
+import { Icon } from "./icon";
 
 export const Collection = (collection: CollectionType) => {
   return (
@@ -12,14 +12,15 @@ export const Collection = (collection: CollectionType) => {
         flex="row"
         rounded="md"
         p="2"
-        border="~ gray/40"
-        dark="border-gray-7"
-        hover="border-indigo c-indigo"
-        bg="gray/5"
+        // border="~ transparent"
+        // dark="border-gray-7"
+        bg="gray-5/10 dark:gray-4/10"
+        hover="c-indigo-5 dark:c-indigo bg-indigo-1/50 dark:bg-indigo-1/20"
+        transition="all 0.2s"
       >
         <div flex="1" gap="1">
           <h2>{collection.name}</h2>
-          <div opacity="60" text="xs">
+          <div opacity="80" text="xs">
             <p>{collection.author.name}</p>
             <p>{collection.license.title}</p>
             <p>{collection.total} icons</p>
@@ -32,5 +33,5 @@ export const Collection = (collection: CollectionType) => {
         </div>
       </div>
     </Link>
-  )
-}
+  );
+};

@@ -47,7 +47,7 @@ export const IconShow = (props: IconProps) => {
         border-transparent
         rounded-md
         p-1
-        hover="border-indigo c-indigo"
+        hover="border-indigo c-indigo-5"
         cursor-pointer
         onClick={() => setShow(!show())}
       >
@@ -89,7 +89,7 @@ export const IconShow = (props: IconProps) => {
               >
                 <MdiClose size={30} />
               </div>
-              <div rounded-xl border="1 indigo/50" p-2 hover="border-indigo">
+              <div rounded-xl border="1 gray/40" p-2 hover="c-indigo border-indigo">
                 <Icon {...props} size={200} />
               </div>
               <div gap-3 flex-1>
