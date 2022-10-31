@@ -89,8 +89,15 @@ export const IconShow = (props: IconProps) => {
               >
                 <MdiClose size={30} />
               </div>
-              <div rounded-xl border="1 gray/40" p-2 hover="c-indigo border-indigo">
-                <Icon {...props} size={200} />
+              <div
+                rounded-xl
+                border="1 gray/40"
+                p-2
+                hover="c-indigo border-indigo"
+              >
+                <div max-w-sm p-1 class="overflow-overlay">
+                  <Icon {...props} size={200} />
+                </div>
               </div>
               <div gap-3 flex-1>
                 <h3 text-xl>Import icon from library</h3>
@@ -98,7 +105,7 @@ export const IconShow = (props: IconProps) => {
                   content={`import { ${name} } from 'solid-iconify/${props.dir}'`}
                 >
                   <div block>
-                    <span c-indigo break-all>
+                    <span c-indigo-5 break-all>
                       import
                     </span>
                     <span break-all c-orange>
@@ -108,7 +115,7 @@ export const IconShow = (props: IconProps) => {
                     <span break-all c-orange>
                       {" } "}
                     </span>
-                    <span c-indigo break-all>
+                    <span c-indigo-5 break-all>
                       from 'solid-iconify/{props.dir}'
                     </span>
                   </div>
@@ -116,11 +123,11 @@ export const IconShow = (props: IconProps) => {
                 <h3 text-xl>Render the icon</h3>
                 <Copy content={`<${name} />`}>
                   <div block>
-                    <span c-indigo break-all>
+                    <span c-indigo-5 break-all>
                       &lt;
                     </span>
                     <span break-all>{name}</span>
-                    <span c-indigo break-all>
+                    <span c-indigo-5 break-all>
                       {" "}
                       /&gt;
                     </span>
