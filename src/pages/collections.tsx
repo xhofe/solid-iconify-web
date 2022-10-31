@@ -1,6 +1,6 @@
 import { Link, Outlet, useParams, useSearchParams } from "@solidjs/router";
 import { createSignal, For } from "solid-js";
-import { collections } from "../store/collections";
+import { collections, setSearchMode } from "../store/collections";
 
 const Collections = () => {
   const params = useParams();
@@ -63,18 +63,34 @@ const Collections = () => {
         </div>
       </div>
       <div p-4 flex-1>
-        <input
-          placeholder="Search icons"
-          outline-none
-          c-indigo
-          px-4
-          py-2
-          rounded-md
-          w-full
-          bg="gray/15"
-          onInput={(e) => setSearchParams({ q: e.currentTarget.value })}
-          value={searchParams.q ?? ""}
-        />
+        <div flex-row gap-2>
+          <select
+            bg="gray/15"
+            rounded-md
+            outline-none
+            p-1
+            cursor-pointer
+            onChange={(e) => {
+              setSearchMode(e.currentTarget.value);
+            }}
+          >
+            <option value="precise">Precise search</option>
+            <option value="fuzzy">Fuzzy search</option>
+          </select>
+          <input
+            placeholder="Search icons"
+            outline-none
+            c-indigo
+            px-4
+            py-2
+            rounded-md
+            flex-1
+            bg="gray/15"
+            onInput={(e) => setSearchParams({ q: e.currentTarget.value })}
+            value={searchParams.q ?? ""}
+          />
+        </div>
+
         <Outlet />
       </div>
     </div>

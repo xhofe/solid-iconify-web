@@ -1,3 +1,4 @@
+import { createSignal } from "solid-js";
 import { createStore } from "solid-js/store";
 import { CollectionType } from "../types";
 import data from "../web.json";
@@ -22,16 +23,24 @@ export const searchCollections = (search: string = "") => {
   return Array.from(map.entries());
 };
 
+const [searchMode, setSearchMode] = createSignal("precise");
+
+export { setSearchMode };
+
 export const match = (text: string, search: string) => {
-  if (!search) return true;
-  let index = 0;
-  for (let i = 0; i < text.length; i++) {
-    if (text[i].toLowerCase() === search[index].toLowerCase()) {
-      index++;
-      if (index === search.length) return true;
+  if (searchMode() === "fuzzy") {
+    if (!search) return true;
+    let index = 0;
+    for (let i = 0; i < text.length; i++) {
+      if (text[i].toLowerCase() === search[index].toLowerCase()) {
+        index++;
+        if (index === search.length) return true;
+      }
     }
+    return false;
+  } else if (searchMode() === "precise") {
+    return text.toLowerCase().includes(search.toLowerCase());
   }
-  return false;
 };
 
 export const searchIcons = (search: string = "", collectionDir = "") => {
